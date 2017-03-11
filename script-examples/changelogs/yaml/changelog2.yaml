@@ -1,0 +1,22 @@
+databaseChangeLog:
+   - changeSet:
+      id: 2
+      author: illia_seleznov
+      changes:
+         - addColumn:
+            tableName: person
+            columns:
+               - column:
+                  name: username
+                  type: varchar(8)
+
+   - changeSet:
+      id: 3
+      author: illia_seleznov
+      changes:
+         - addLookupTable:
+            existingTableName: person
+            existingColumnName: state
+            newTableName: state
+            newColumnName: id
+            newColumnDataType: char(2)
