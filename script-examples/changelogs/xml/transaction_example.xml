@@ -1,0 +1,27 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd"
+        logicalFilePath="add_unique_constraint_to_person_table">
+
+    <changeSet id="add_unique_constraint_to_person_table" author="illia_seleznov">
+        <addUniqueConstraint tableName="person" columnNames="username"/>
+    </changeSet>
+
+
+    <changeSet id="insert_test_data" author="illia_seleznov" runInTransaction="false">
+        <insert tableName="person">
+            <column name="username" value="Illcko"/>
+            <column name="lastname" value="Seleznov"/>
+        </insert>
+
+        <insert tableName="person">
+            <column name="username" value="Illcko"/>
+            <column name="lastname" value="Seleznov"/>
+        </insert>
+    </changeSet>
+
+
+</databaseChangeLog>

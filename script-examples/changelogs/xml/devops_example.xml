@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd"
+        logicalFilePath="devops_example.xml">
+
+    <changeSet id="bad_bad_practice" author="Illia_Seleznov">
+        <validCheckSum/>
+        <createTable tableName="angry_devops">
+            <column name="angry" type="int"/>
+        </createTable>
+
+
+        <createTable tableName="angry_devops" >
+            <column name="devops" type="int"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
