@@ -24,3 +24,5 @@ liquibase-demo.iml
 .idea/dataSources.ids
 .idea/dataSources.local.xml
 .idea/dataSources.xml
+
+/doc/
