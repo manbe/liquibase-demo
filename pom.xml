@@ -122,7 +122,7 @@
                                     <goal>update</goal>
                                 </goals>
                                 <configuration>
-                                    <!--<changeLogFile>${liquibase.createtables}</changeLogFile>-->
+                                    <changeLogFile>${liquibase.createtables}</changeLogFile>
                                     <propertyFileWillOverride>true</propertyFileWillOverride>
                                     <propertyFile>src/main/resources/liquibase.properties</propertyFile>
                                 </configuration>
