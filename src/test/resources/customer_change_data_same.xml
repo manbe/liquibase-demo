@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+
+    <changeSet author="illcko" id="1456799225453-1" context="test">
+        <insert tableName="customer">
+            <column name="id" valueNumeric="15"/>
+            <column name="balance" valueNumeric="20"/>
+            <column name="email" value="manbe@mail.com"/>
+            <column name="name" value="lol_same"/>
+            <column name="version" valueNumeric="1"/>
+        </insert>
+
+        <rollback>
+            <delete tableName="customer">
+                <where>id=15</where>
+            </delete>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
